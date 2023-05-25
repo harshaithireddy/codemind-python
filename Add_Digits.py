@@ -1,12 +1,12 @@
-def add_digits(num):
-    if num == 0:
-        return 0
-    elif num % 9 == 0:
-        return 9
-    else:
-        return num % 9
+def add_digits(n):
+    while n > 9:
+        sum1 = 0
+        while n > 0:
+            sum1 += n % 10
+            n //= 10
+        n = sum1
+    return n
 
-
-num = int(input())
-result = add_digits(num)
-print(result)
+n = int(input())
+res = add_digits(n)
+print(res)
