@@ -1,11 +1,14 @@
-def is_fibonacci(num):
-    a, b = 0, 1
-    while b < num:
-        a, b = b, a + b
-    if b == num:
-        return True
-    else:
-        return False
+def is_fibonacci(n):
+    a = 0
+    b = 1
 
-num = int(input())
-print(is_fibonacci(num))
+    while b <= n:
+        if b == n:
+            return True
+        a, b = b, a + b
+
+    return False
+
+
+n = int(input())
+print(is_fibonacci(n))
